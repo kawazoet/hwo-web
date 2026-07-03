@@ -1,9 +1,8 @@
+.gitmodules
+.hugo_build.lock
 /public
 /themes
-.gitmodules
-themes/mainroad
 themes/PaperMod
 static/slack/.env
-.hugo_build.lock
 static/message/.env
 static/slack/index.html.tmpl
