@@ -1,8 +1,8 @@
 ---
-title: 'お問い合わせ'
 url: "/message/confirm.html"
 draft: false
 ---
+# お問い合わせ
 
 以下のメッセージを送信します。\
 よろしければ、送信ボタンを押してください。
