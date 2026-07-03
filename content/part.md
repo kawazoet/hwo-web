@@ -1,3 +1,6 @@
+---
+robotsNoIndex: true
+---
 # パート紹介
 
 ## CLARINET
