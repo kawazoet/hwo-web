@@ -2,7 +2,7 @@
 
 ## ログイン
 
-下のボタンを押し、さらに[許可する]ボタンを押すことでログインができます。
+下のボタンを押し、さらに[承諾して続行する]ボタンを押すことでログインができます。
 
 <a href="https://hokusetsuwo.slack.com/oauth/authorize?scope=identity.basic&client_id=673154486163.2406936919959"><img src="https://api.slack.com/img/sign_in_with_slack.png" /></a>
 
