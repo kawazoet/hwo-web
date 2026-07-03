@@ -31,7 +31,7 @@ function check_login($conn)
     $db_arr = select_session($conn, $atoken);
     
     if (!$db_arr) {
-        header('Location: https://hokusetsu-wind.click/slack/login.html');
+        header('Location: https://hokusetsu-wind.com/slack/login.html');
         exit;
     }
     
