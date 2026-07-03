@@ -2,6 +2,17 @@
 
 ini_set('display_errors', "On");
 
+// 設定ファイルを読み込む
+function loadEnv($path) {
+    if (!file_exists($path)) return;
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) continue;
+        list($name, $value) = explode('=', $line, 2);
+        $_ENV[trim($name)] = trim($value);
+    }
+}
+
 require_once("common.php");
 
 $conn = connect_db();
@@ -13,7 +24,7 @@ if(!isset($_GET["code"])) {
 
 // .envから読み込み
 loadEnv(__DIR__ . '/.env');
-$url = $_ENV['SLACK_WEBHOOK_URL'];
+$url = $_ENV['SLACK_OAUTH_URL'];
 $client_id = $_ENV['SLACK_CLIENT_ID'];
 $client_secret = $_ENV['SLACK_CLIENT_SECRET'];
 
