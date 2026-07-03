@@ -25,3 +25,8 @@
 <% /def %>
 </tbody>
 </table>
+
+(iCal形式のスケジュールは[こちら](/schedule/schedule_ics.php))
+
+当楽団に興味を持たれた方は、ぜひ一度見学におこしください。
+詳細は[団員募集](/invite/)にて。
