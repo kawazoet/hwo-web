@@ -4,7 +4,7 @@
 include_once("Skinny.php");
 
 // スケジュールを取得
-$conn = pg_connect("dbname=hokusetsu");
+$conn = pg_connect("");
 $result = pg_query($conn, "select date,start_time,end_time,menu,note from schedule where date >= to_char(current_timestamp, 'yyyymmdd')::integer order by date,start_time");
 
 // Skinnyへ渡す配列宣言
