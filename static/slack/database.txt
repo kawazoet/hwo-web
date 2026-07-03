@@ -1,0 +1,10 @@
+
+--- セッション情報
+
+create table session_info(
+    atoken varchar(256) primary key,
+    id     varchar(256) not null,
+    name   varchar(256) not null,
+    ctime  timestamp not null
+);
+

@@ -1,0 +1,8 @@
+/public
+/themes
+.gitmodules
+themes/mainroad
+themes/PaperMod
+static/slack/.env
+.hugo_build.lock
+static/message/.env

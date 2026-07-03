@@ -1,0 +1,31 @@
+■ これまで
+
+create table schedule (
+    date       integer not null,
+    start_time integer not null,
+    end_time   integer not null,
+    menu       text not null,
+    note       text not null,
+    id         serial
+);
+
+grant select,insert,delete on schedule to "www-data";
+grant select, update on schedule_id_seq to "www-data";
+
+・たぶん grant は発行していない模様。
+・書いていないけど、idに対して、uniqueキーを貼っていた。
+
+■ 2013/10/28
+
+以下のテーブルに移行した。
+アプリへは今のところ手を入れていないので、不具合がでたら、切り戻す。
+
+create table schedule (
+    id         serial primary key,
+    date       integer not null,
+    start_time integer not null,
+    end_time   integer not null,
+    menu       text not null,
+    note       text not null
+);
+

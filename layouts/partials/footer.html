@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="social-icons">
+    {{ range site.Params.socialIcons }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}">
+        {{ partial "svg.html" . }}
+      </a>
+    {{ end }}
+  </div>
+
+  <div class="copyright">
+    © {{ now.Year }} 北摂ウィンドオーケストラ
+  </div>
+</footer>

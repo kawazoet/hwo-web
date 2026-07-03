@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>スケジュール確認・追加</title>
+</head>
+
+<body bgcolor="ivory" text="black" link="blue" vlink="purple" alink="red">
+
+<h2>現在登録されているスケジュール</h2>
+
+<table border>
+<tr><th>日付</th><th>時間</th><th>内容</th><th>備考</th><th>&nbsp;</th></tr>
+<% def(SCHEDULE) %>
+  <% each(SCHEDULE) %>
+    <tr>
+      <td><% echo(SCHEDULE/DATE) %></td>
+      <td><% echo(SCHEDULE/TIME) %></td>
+      <td><% echo(SCHEDULE/MENU|htmlspecialchars) %></td>
+      <td><% echo(SCHEDULE/NOTE|htmlspecialchars) %></td>
+      <td>
+        <a href="<% echo(SCHEDULE/EDITLINK) %>">変更</a>
+        <a href="<% echo(SCHEDULE/DELETELINK) %>">削除</a>
+      </td>
+    </tr>
+  <% /each %>
+<% /def %>
+</table>
+
+<h2>スケジュールの追加</h2>
+
+<form action="regist.php" method="POST">
+
+<table border>
+<tr>
+<th>日付</th>
+<td>
+<select name="year">
+<option selected><% echo(YEAR) %>
+<option><% echo(NEXTYEAR) %>
+</select>
+年
+<select name="month">
+<option>1<option>2<option>3
+<option>4<option>5<option>6
+<option>7<option>8<option>9
+<option>10<option>11<option>12
+</select>
+月
+<select name="day">
+<option>1<option>2<option>3
+<option>4<option>5<option>6
+<option>7<option>8<option>9
+<option>10<option>11<option>12
+<option>13<option>14<option>15
+<option>16<option>17<option>18
+<option>19<option>20<option>21
+<option>22<option>23<option>24
+<option>25<option>26<option>27
+<option>28<option>29<option>30
+<option>31
+</select>
+日
+</td>
+</tr>
+<tr>
+<th>開始時刻</th>
+<td>
+<select name="start_hour">
+<option>0<option>1<option>2<option>3
+<option>4<option>5<option>6<option>7
+<option>8<option>9<option>10<option>11
+<option>12<option>13<option>14<option>15
+<option>16<option>17<option>18<option>19
+<option>20<option>21<option>22<option>23
+</select>
+時
+<select name="start_min">
+<option>0<option>5<option>10<option>15
+<option>20<option>25<option>30<option>35
+<option>40<option>45<option>50<option>55
+</select>
+分
+</td>
+</tr>
+<tr>
+<th>終了時刻</th>
+<td>
+<select name="end_hour">
+<option>0<option>1<option>2<option>3
+<option>4<option>5<option>6<option>7
+<option>8<option>9<option>10<option>11
+<option>12<option>13<option>14<option>15
+<option>16<option>17<option>18<option>19
+<option>20<option>21<option>22<option>23
+</select>
+時
+<select name="end_min">
+<option>0<option>5<option>10<option>15
+<option>20<option>25<option>30<option>35
+<option>40<option>45<option>50<option>55
+</select>
+分
+</td>
+</tr>
+<tr>
+<th>内容</th>
+<td><input type="text" name="menu" size="60"></td>
+</tr>
+<tr>
+<th>備考</th>
+<td><input type="text" name="note" size="60"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" value=" 登録 "></td>
+</tr>
+</table>
+
+</form>
+
+</html>

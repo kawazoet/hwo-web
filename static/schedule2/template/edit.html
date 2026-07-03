@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>スケジュール変更</title>
+</head>
+
+<body bgcolor="ivory" text="black" link="blue" vlink="purple" alink="red">
+
+<h2>スケジュール変更</h2>
+
+<form action="edit2.php" method="POST">
+
+<input type="hidden" name="id" value="<% echo(ID) %>">
+
+<table border>
+<tr>
+<th>日付</th>
+<td>
+<input type="text" name="year" value="<% echo(YEAR) %>" size="4">
+年
+<input type="text" name="month" value="<% echo(MONTH) %>" size="2">
+月
+<input type="text" name="day" value="<% echo(DAY) %>" size="2">
+日
+</td>
+</tr>
+<tr>
+<th>開始時刻</th>
+<td>
+<input type="text" name="start_hour" value="<% echo(STARTHOUR) %>" size="2">
+時
+<input type="text" name="start_min" value="<% echo(STARTMIN) %>" size="2">
+分
+</td>
+</tr>
+<tr>
+<th>終了時刻</th>
+<td>
+<input type="text" name="end_hour" value="<% echo(ENDHOUR) %>" size="2">
+時
+<input type="text" name="end_min" value="<% echo(ENDMIN) %>" size="2">
+分
+</td>
+</tr>
+<tr>
+<th>内容</th>
+<td><input type="text" name="menu" size="60" value="<% echo(MENU|htmlspecialchars) %>"></td>
+</tr>
+<tr>
+<th>備考</th>
+<td><input type="text" name="note" size="60" value="<% echo(NOTE|htmlspecialchars) %>"></td>
+</tr>
+</table>
+
+<p>
+<input type="submit" value=" 変更 ">
+</p>
+
+<p>
+<a href="index.php">戻る</a>
+</p>
+
+</form>
+
+</html>

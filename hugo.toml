@@ -1,0 +1,81 @@
+baseURL = "https://hokusetsu-wind.click/"
+title = "北摂ウィンドオーケストラ"
+languageCode = "ja"
+theme = "PaperMod"
+googleAnalytics = "GTM-TN29M7L"
+
+# ページネーション
+[pagination]
+  pagerSize = 10
+
+# Markdown設定
+[markup.goldmark.renderer]
+  unsafe = true
+
+# PaperMod設定
+[params]
+  description = "Hokusetsu Wind Orchestra's web site"
+
+  # テーマ（固定）
+  defaultTheme = "light"
+  disableThemeToggle = true
+
+  # 表示系
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+  ShowCodeCopyButtons = false
+  ShowToc = false
+
+  # 記事対象
+  mainSections = ["docs"]
+
+# アイコン
+[params.label]
+  icon = "/images/hwo.gif"
+  iconHeight = 50
+
+# SNS
+[[params.socialIcons]]
+  name = "x"
+  url = "https://x.com/hokusetsuwo"
+
+[[params.socialIcons]]
+  name = "facebook"
+  url = "https://facebook.com/hokusetsuwo"
+
+[[params.socialIcons]]
+  name = "instagram"
+  url = "https://instagram.com/hokusetsuwo"
+
+# メニュー
+[[menu.main]]
+  name = "楽団紹介"
+  url = "/about/"
+  weight = 1
+
+[[menu.main]]
+  name = "演奏会への思い"
+  url = "/mind/"
+  weight = 2
+
+[[menu.main]]
+  name = "団員募集"
+  url = "/invite/"
+  weight = 3
+
+[[menu.main]]
+  name = "練習日程"
+  url = "/schedule/schedule.php"
+  weight = 4
+
+[[menu.main]]
+  name = "お問い合わせ"
+  url = "/message/index.php"
+  weight = 5
+
+[[menu.main]]
+  name = "団員専用"
+  url = "/slack"
+  weight = 6

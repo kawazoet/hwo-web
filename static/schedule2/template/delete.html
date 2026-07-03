@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>スケジュール削除</title>
+</head>
+
+<body bgcolor="ivory" text="black" link="blue" vlink="purple" alink="red">
+
+<h2>スケジュール削除</h2>
+
+<p>
+以下のスケジュールを削除しても良いですか?
+</p>
+
+
+<table border>
+<tr><th>日付</th><th>時間</th><th>内容</th><th>備考</th></tr>
+<tr>
+<tr>
+<td><% echo(DATE) %></td>
+<td><% echo(TIME) %></td>
+<td><% echo(MENU|htmlspecialchars) %></td>
+<td><% echo(NOTE|htmlspecialchars) %></td>
+</tr>
+</table>
+
+<form action="delete2.php">
+<input type="hidden" name="id" value="<% echo(ID) %>">
+<input type="submit" value=" 削除 ">
+</form>
+
+<p>
+<a href="index.php">戻る</a>
+</p>
+
+</html>
