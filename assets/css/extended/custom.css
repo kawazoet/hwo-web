@@ -241,3 +241,8 @@ textarea {
 .post-content a:hover {
   text-decoration: underline;
 }
+
+
+.anchor {
+    display: none !important;
+}
