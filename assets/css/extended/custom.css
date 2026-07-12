@@ -43,6 +43,9 @@ body {
 /* ヘッダー（水色） */
 .header {
   background-color: #cce7f6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 
