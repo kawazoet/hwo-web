@@ -249,3 +249,21 @@ textarea {
 .anchor {
     display: none !important;
 }
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0 !important;
+}
+
+/* スマホだけ画面幅いっぱい */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 100vw;
+        max-width: none;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
