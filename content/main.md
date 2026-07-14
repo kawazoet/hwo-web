@@ -2,7 +2,7 @@
 url: "/"
 ---
 
-![HWO](/images/hwo2.jpg)
+<img alt="HWO" loading="lazy" src="/images/hwo2.jpg" class="hero-image">
 
 ## 🎺演奏会のお知らせ
 
