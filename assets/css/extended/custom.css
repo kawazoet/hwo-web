@@ -12,18 +12,15 @@
    Base Layout & Background
    ================================================== */
 
-body {
-    background: #f8f4e6;
-}
-
+body,
 body.list {
-    background-color: #f8f4e6 !important;
+    background: #f8f4e6 url("/images/bg-c.gif") right bottom no-repeat;
 }
 
 @media (min-width: 768px) {
     body,
     body.list {
-        background: #f8f4e6 url("/images/bg-c.gif") right bottom no-repeat fixed;
+        background-attachment: fixed;
     }
 }
 
