@@ -1,263 +1,87 @@
-.footer {
-  padding: 10px 0;
-  text-align: center;
-  border-top: 1px solid var(--border);
+/* ==================================================
+   Theme Variables
+   ================================================== */
+
+:root {
+    --theme: #f8f4e6;
+    --header-height: 50px;
 }
 
-.footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 6px;
-}
 
-.footer .social-icons svg {
-  width: 24px;
-  height: 24px;
-  opacity: 0.8;
-  transition: 0.2s;
-}
-
-.footer .social-icons a:hover svg {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-.footer .copyright {
-  font-size: 1rem;
-  color: var(--secondary);
-}
-
-/* 背景（アイボリー） */
+/* ==================================================
+   Base Layout & Background
+   ================================================== */
 
 body {
-  background: #f8f4e6;
+    background: #f8f4e6;
+}
+
+body.list {
+    background-color: #f8f4e6 !important;
 }
 
 @media (min-width: 768px) {
-  body {
-    background: #f8f4e6 url("/images/bg-c.gif") right bottom no-repeat fixed;
-  }
+    body,
+    body.list {
+        background: #f8f4e6 url("/images/bg-c.gif") right bottom no-repeat fixed;
+    }
 }
 
-/* ヘッダー（水色） */
-.header {
-  background-color: #cce7f6;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.main {
+    padding-top: 12px;
 }
 
-
-/* ヘッダー文字 */
-.header a,
-.header .logo {
-  color: #333;
+.post-single,
+.post-content,
+.first-entry {
+    margin-top: 0;
 }
 
-/* ヘッダー下に少し影をつけて浮かせる */
-.header {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+.post-header {
+    display: none;
 }
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-label {
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.form-value {
-  padding: 10px 12px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-}
-
-.form-actions {
-  text-align: center;
-  margin-top: 24px;
-}
-
-.form-actions button {
-  background: transparent;
-  color: #666;
-  border: none;
-  cursor: pointer;
-}
-
-/* フォームを記事幅に合わせる */
-.post-content form {
-  max-width: 100%;
-  margin: 20px 0;
-  padding: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-/* グループを広げる */
-.form-group {
-  margin-bottom: 24px;
-}
-
-/* ラベル */
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-/* 入力欄 */
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-}
-
-
-.form-group input,
-.form-group textarea {
-  border: 1px solid #bbb;
-}
-
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #5cb3d6;
-  box-shadow: 0 0 0 3px rgba(92,179,214,0.25);
-}
-
-
-.form-actions input[type="submit"] {
-  background: #5cb3d6;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 6px;
-}
-
-
-/* 本文は広く */
-textarea {
-  min-height: 180px;
-}
-
-.post-content form {
-  max-width: 700px;
-  margin: 30px 0;
-  padding: 24px;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-/* スケジュール表 */
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-/* ヘッダー */
-.schedule-table th {
-  background: #cce7f6;
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-/* セル */
-.schedule-table td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
-  font-size: 0.9rem;
-}
-
-/* 行ごとに色変える（超重要） */
-.schedule-table tr:nth-child(even) {
-  background: #fafafa;
-}
-
-/* 日付を強調 */
-.schedule-table td:first-child {
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-/* 時間も少し強調 */
-.schedule-table td:nth-child(2) {
-  white-space: nowrap;
-  color: #555;
-}
-
-/* 活動履歴のMarkdown表（PaperMod用） */
-.post-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
-
-/* ヘッダー */
-.post-content thead th {
-  background: #cce7f6;
-  padding: 12px;
-  text-align: left;
-  font-weight: 600;
-  border-bottom: 2px solid #bbb;
-}
-
-/* セル */
-.post-content td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
-}
-
-/* 行ごとに色をつける（超重要） */
-.post-content tbody tr:nth-child(even) {
-  background: #fafafa;
-}
-
-/* 日付列を強調 */
-.post-content td:first-child {
-  font-weight: bold;
-  white-space: nowrap;
-  width: 110px;
-}
-
-/* 活動列 */
-.post-content td:nth-child(2) {
-  line-height: 1.6;
-}
-
-/* リンク（ブログなど） */
-.post-content a {
-  color: #5cb3d6;
-  text-decoration: none;
-}
-
-.post-content a:hover {
-  text-decoration: underline;
-}
-
 
 .anchor {
     display: none !important;
 }
+
+
+/* ==================================================
+   Header
+   ================================================== */
+
+.header {
+    background-color: #cce7f6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header a,
+.header .logo {
+    color: #333;
+}
+
+.logo a {
+    font-size: 0;
+}
+
+
+/* ==================================================
+   Hero Image
+   ================================================== */
 
 .hero-image {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
-/* スマホだけ画面幅いっぱい */
 @media (max-width: 768px) {
     .hero-image {
         width: 100vw;
@@ -266,4 +90,202 @@ textarea {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+
+/* ==================================================
+   Footer
+   ================================================== */
+
+.footer {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 6px;
+}
+
+.footer .social-icons svg {
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
+    transition: 0.2s;
+}
+
+.footer .social-icons a:hover svg {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer .copyright {
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+
+/* ==================================================
+   Forms
+   ================================================== */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label,
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-value {
+    padding: 10px 12px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #5cb3d6;
+    box-shadow: 0 0 0 3px rgba(92, 179, 214, 0.25);
+}
+
+textarea {
+    min-height: 180px;
+}
+
+.post-content form {
+    max-width: 700px;
+    margin: 30px 0;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.form-actions button {
+    background: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+}
+
+.form-actions input[type="submit"] {
+    background: #5cb3d6;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+
+/* ==================================================
+   Schedule Table
+   ================================================== */
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.schedule-table th {
+    background: #cce7f6;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.schedule-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+    font-size: 0.9rem;
+}
+
+.schedule-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.schedule-table td:first-child {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.schedule-table td:nth-child(2) {
+    white-space: nowrap;
+    color: #555;
+}
+
+
+/* ==================================================
+   Markdown Tables
+   ================================================== */
+
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.post-content thead th {
+    background: #cce7f6;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #bbb;
+}
+
+.post-content td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.post-content tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.post-content td:first-child {
+    width: 110px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.post-content td:nth-child(2) {
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   Post Content Links
+   ================================================== */
+
+.post-content a {
+    color: #5cb3d6;
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
 }
