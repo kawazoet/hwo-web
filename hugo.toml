@@ -33,7 +33,7 @@ googleAnalytics = "GTM-TN29M7L"
 
 # アイコン
 [params.label]
-  icon = "/images/hwo.gif"
+  icon = "/images/logo100.png"
   iconHeight = 50
 
 # SNS
