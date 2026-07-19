@@ -286,3 +286,8 @@ textarea {
 .post-content a:hover {
     text-decoration: underline;
 }
+
+.post-content h1,
+.post-content h2 {
+  scroll-margin-top: 100px;
+}
