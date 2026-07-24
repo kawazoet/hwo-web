@@ -7,7 +7,7 @@
 |2025/5/11 | [第22回定期演奏会](#第22回定期演奏会) / [ブログ](https://blog.hokusetsu-wind.com/archives/52057201.html) |
 |2024/11/24 | [秋のポップコンサート2024](#秋のポップコンサート2024) / [ブログ](https://blog.hokusetsu-wind.com/archives/52052054.html) |
 |2024/5/12 | [第21回定期演奏会](#第21回定期演奏会) / [ブログ](https://blog.hokusetsu-wind.com/archives/52045964.html) |
-|2023/10/22 | [秋のポップコンサート2023](#秋のポップコンサート2023) / [ブログ](https://blog.hokusetsu-wind.com/archives/52041742.html) |
+|2023/10/22 | [秋のポップコンサート2023](#秋のポップコンサート2023) / [ブログ](https://blog.hokusetsu-wind.com/archives/52039927.html) |
 |2023/5/14 | [第20回定期演奏会](#第20回定期演奏会) / [ブログ](https://blog.hokusetsu-wind.com/archives/52034284.html) |
 |2022/12/25 | [Winter Pop Concert 2022](#winter-pop-concert-2022) / [ブログ](https://blog.hokusetsu-wind.com/archives/52028651.html)|
 |2022/5/22 | [第19回定期演奏会](#第19回定期演奏会) / [ブログ](https://blog.hokusetsu-wind.com/archives/52021802.html)|
