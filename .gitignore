@@ -6,3 +6,4 @@ themes/PaperMod
 static/slack/.env
 static/message/.env
 static/slack/index.html.tmpl
+*.bat
