@@ -1,3 +1,3 @@
 <?php
-header("Location: https://docs.google.com/forms/d/e/1FAIpQLSdpXQbkbb6hsM_K04G9kp8QwTk3VILYJKGqPPo_cPgyAQIKKQ/viewform", true, 302);
+header("Location: https://docs.google.com/forms/d/e/1FAIpQLSc7GLhN_YMGz1lEM9BEL1ckqKuhvm8xqenVH8Ir5VOZPn1Fag/formResponse", true, 302);
 exit;
