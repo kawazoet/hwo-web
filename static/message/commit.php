@@ -65,6 +65,19 @@ mb_send_mail($mail4, "[北摂] メッセージ", $mail_body);
 
 //// Slackへの投稿ではメールアドレスを非表示にする。
 
+// 空っぽだとダメ
+// 空白文字しか入力されていない場合も除外
+if (preg_replace('/[\s　]+/u', '', $body) === '') {
+    // セッションの破棄
+    session_unset();
+
+    // Skinnyで出力（必要に応じてスキップ可能）
+    $Skinny->SkinnyDisplay("commit.html");
+
+    // Slackを送信せずに終了
+    exit;
+}
+
 // SemrushBot チェック
 $user_agent = $_SERVER["HTTP_USER_AGENT"];
 if (strpos($user_agent, "SemrushBot") !== false) {
@@ -72,7 +85,7 @@ if (strpos($user_agent, "SemrushBot") !== false) {
     session_unset();
 
     // Skinnyで出力（必要に応じてスキップ可能）
-    $Skinny->SkinnyDisplay("message3.html");
+    $Skinny->SkinnyDisplay("commit.html");
 
     // Slackを送信せずに終了
     exit;
