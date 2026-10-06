@@ -8,7 +8,8 @@
 - 会場 高槻城公園芸術文化劇場 南館 トリシマホール
 - 入場無料 / 開演 14:00
 
-<img alt="HWO" loading="lazy" src="/images/2026aki.jpg">
+多数のご来場、誠にありがとうございました。
+<!-- <img alt="HWO" loading="lazy" src="/images/2026aki.jpg"> -->
 
 ## Information
 
